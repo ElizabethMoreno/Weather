@@ -21,5 +21,5 @@ respuesta = requests.get('http://api.openweathermap.org/data/2.5/weather',params
 dicc = json.loads(respuesta.text)
 temperatura = dicc ["main"]["temp"]
 ciudad = provincias[num_ciudad]
-centigrados = temperatura - 273
+centigrados = int(temperatura - 273)
 print "La temperatura actual de", ciudad, "es", centigrados, "grados centigrados."
